@@ -51,6 +51,12 @@ img, svg {
     min-height: 100%;
 }
 
+@media (min-width: 1024px) {
+    .wrapper {
+        padding: 0;
+    }
+}
+
 .card-container {
     border-radius: 8px;
     overflow: hidden;
