@@ -43,30 +43,30 @@ img, svg {
     max-width: 100%;
 }
 
-input, button, textarea, select {
-    font: inherit;
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 88px 24px;
+    min-height: 100%;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
+.card-container {
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 920px;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns:
+      repeat(auto-fill, minmax(min(306px, 100%), 1fr));
 }
 
-.card__header, .card__text {
-    color: var(--white);
-}
-
-.card__header {
-    font-family: 'BigShouldersDisplay-Bold', Arial, sans-serif;
-    font-size: 4rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.card__text {
-    font-family: 'LexendDeca-regular', Arial, sans-serif;
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 25px;
+.card {
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 25px;
+    padding: 48px;
 }
 
 .card--1 {
@@ -79,4 +79,59 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .card--3 {
     background-color: var(--darkGreen);
+}
+
+.card__header, .card__text {
+    color: var(--white);
+    overflow-wrap: break-word;
+}
+
+.card__header {
+    font-family: 'BigShouldersDisplay-Bold', Arial, sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card__text,
+.card__button {
+    font-family: 'LexendDeca-regular', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.card__button {
+    background-color: var(--white);
+    border: none;
+    padding: 12px 32px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-top: auto;
+    transition: 220ms all ease-in-out;
+}
+
+.card--1 .card__button {
+    color: var(--orange);
+}
+
+.card--2 .card__button {
+    color: var(--lightGreen);
+}
+
+.card--3 .card__button {
+    color: var(--darkGreen);
+}
+
+.card__button:hover,
+.card__button:active {
+    background-color: transparent;
+    color: var(--white);
+    box-shadow: inset 0 0 0 1px var(--white);
+}
+
+.card__button:focus {
+    outline-style: solid;
+    outline-color: transparent;
+    box-shadow: 0 0 0 4px blue;
 }
