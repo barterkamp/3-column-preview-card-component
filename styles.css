@@ -1,3 +1,22 @@
+@font-face {
+    font-family: 'LexendDeca-regular';
+    font-weight: 400;
+    src: url('./assets/fonts/LexendDeca-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BigShouldersDisplay-Bold';
+    font-weight: 700;
+    src: url('./assets/fonts/BigShouldersDisplay-Bold.ttf') format('truetype');
+}
+
+:root {
+    --orange: #E28625;
+    --lightGreen: #006971;
+    --darkGreen: #004140;
+    --white: #FFF;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -8,6 +27,10 @@
 
 html, body {
     height: 100%;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
@@ -26,4 +49,22 @@ input, button, textarea, select {
 
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+}
+
+.card__header, .card__text {
+    color: var(--white);
+}
+
+.card__header {
+    font-family: 'BigShouldersDisplay-Bold', Arial, sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card__text {
+    font-family: 'LexendDeca-regular', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 25px;
 }
